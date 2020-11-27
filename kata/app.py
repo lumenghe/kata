@@ -3,6 +3,10 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+class Kata:
+    """Class to play Kata game"""
+    pass
+
 def main():
     """ main function """
     first_player = Player("Nathanael")
