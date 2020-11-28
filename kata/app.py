@@ -5,7 +5,11 @@ logger = logging.getLogger(__name__)
 
 class Kata:
     """Class to play Kata game"""
-    pass
+
+    def __init__(self, first_player, second_player):
+        logging.basicConfig(level=logging.ERROR)
+        self.first_player = first_player
+        self.second_player = second_player
 
 def main():
     """ main function """
