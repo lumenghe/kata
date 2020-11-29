@@ -3,6 +3,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+
 class Kata:
     """Class to play Kata game"""
 
@@ -10,6 +11,17 @@ class Kata:
         logging.basicConfig(level=logging.ERROR)
         self.first_player = first_player
         self.second_player = second_player
+
+    def is_deuce(self):
+        """check game is deuce or not
+        :return: True if at least three points have been scored by each player,
+                        and the scores are equal
+                 else False
+        """
+        return (
+            self.first_player.score == self.second_player.score
+            and self.first_player.score >= 3
+        )
 
 def main():
     """ main function """
