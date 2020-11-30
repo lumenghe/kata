@@ -43,6 +43,24 @@ class Kata:
 
         return False
 
+    def has_winner(self):
+        """check game has winner or not
+        :return: first player to have won at least four points in total
+                    and at least two points more than the opponent.
+                 else False
+        """
+        if (
+            self.first_player.score >= 4
+            and self.first_player.score >= self.second_player.score + 2
+        ):
+            return self.first_player
+        if (
+            self.second_player.score >= 4
+            and self.second_player.score >= self.first_player.score + 2
+        ):
+            return self.second_player
+        return False
+
 def main():
     """ main function """
     first_player = Player("Nathanael")
