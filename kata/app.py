@@ -61,6 +61,23 @@ class Kata:
             return self.second_player
         return False
 
+    def get_result(self):
+        """show result
+        :return: game has wins or has advantage or is deuce otherwise game scores
+        """
+        winner = self.has_winner()
+        if winner:
+            return "{} wins".format(winner.name)
+        advantage = self.has_advantage()
+        if advantage:
+            return "{} has advantage".format(advantage.name)
+        is_deuce = self.is_deuce()
+        if is_deuce:
+            return "deuce"
+        return "first:second {}:{}".format(
+            self.first_player.score_name(), self.second_player.score_name()
+        )
+
 def main():
     """ main function """
     first_player = Player("Nathanael")
