@@ -23,6 +23,26 @@ class Kata:
             and self.first_player.score >= 3
         )
 
+    def has_advantage(self):
+        """check game has advantage or not
+        :return: lead player If at least three points have been scored by each side
+                    and a player has one more point than his opponent,
+                    the score of the game is “advantage” for the player in the lead.
+                 else False
+        """
+        if (
+            self.first_player.score >= 4
+            and self.first_player.score == self.second_player.score + 1
+        ):
+            return self.first_player
+        if (
+            self.second_player.score >= 4
+            and self.first_player.score + 1 == self.second_player.score
+        ):
+            return self.second_player
+
+        return False
+
 def main():
     """ main function """
     first_player = Player("Nathanael")
