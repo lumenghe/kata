@@ -78,6 +78,12 @@ class Kata:
             self.first_player.score_name(), self.second_player.score_name()
         )
 
+class Player:
+    """Player Class"""
+
+    SCORE_NAME = ["love", "fifteen", "thirty", "forty"]
+    pass
+
 def main():
     """ main function """
     first_player = Player("Nathanael")
