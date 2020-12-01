@@ -82,7 +82,10 @@ class Player:
     """Player Class"""
 
     SCORE_NAME = ["love", "fifteen", "thirty", "forty"]
-    pass
+
+    def __init__(self, name):
+        self.name = name
+        self._score = 0
 
 def main():
     """ main function """
