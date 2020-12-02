@@ -111,6 +111,7 @@ class Player:
             logger.error("score number error")
             return error.__class__.__name__
 
+
 def main():
     """ main function """
     first_player = Player("Nathanael")
