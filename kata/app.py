@@ -95,6 +95,12 @@ class Player:
         """
         return self._score
 
+    def get_one_score(self):
+        """player get one more score
+        :return: None
+        """
+        self._score += 1
+
 def main():
     """ main function """
     first_player = Player("Nathanael")
