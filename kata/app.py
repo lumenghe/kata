@@ -78,6 +78,7 @@ class Kata:
             self.first_player.score_name(), self.second_player.score_name()
         )
 
+
 class Player:
     """Player Class"""
 
@@ -86,6 +87,13 @@ class Player:
     def __init__(self, name):
         self.name = name
         self._score = 0
+
+    @property
+    def score(self):
+        """score
+        :return: score
+        """
+        return self._score
 
 def main():
     """ main function """
