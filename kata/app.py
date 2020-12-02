@@ -101,6 +101,16 @@ class Player:
         """
         self._score += 1
 
+    def score_name(self):
+        """score name
+        :return: score name or error
+        """
+        try:
+            return self.SCORE_NAME[self._score]
+        except IndexError as error:
+            logger.error("score number error")
+            return error.__class__.__name__
+
 def main():
     """ main function """
     first_player = Player("Nathanael")
