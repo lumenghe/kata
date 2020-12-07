@@ -10,3 +10,10 @@ def test_init():
     assert kata.first_player == "nathanael"
     assert kata.second_player == "gabriel"
 
+
+def test_is_deuce_false():
+    first_player = Player("nathanael")
+    second_player = Player("gabriel")
+    kata = Kata(first_player, second_player)
+    assert kata.is_deuce() == False
+
