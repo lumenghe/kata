@@ -17,3 +17,14 @@ def test_is_deuce_false():
     kata = Kata(first_player, second_player)
     assert kata.is_deuce() == False
 
+
+def test_is_deuce_true():
+    first_player = Player("nathanael")
+    second_player = Player("gabriel")
+    kata = Kata(first_player, second_player)
+    for _ in range(3):
+        first_player.get_one_score()
+        second_player.get_one_score()
+
+    assert kata.is_deuce() == True
+
