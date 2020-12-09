@@ -28,3 +28,9 @@ def test_is_deuce_true():
 
     assert kata.is_deuce() == True
 
+def test_has_winner_false():
+    first_player = Player("nathanael")
+    second_player = Player("gabriel")
+    kata = Kata(first_player, second_player)
+    assert kata.has_winner() == False
+
