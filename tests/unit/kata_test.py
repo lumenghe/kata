@@ -28,6 +28,7 @@ def test_is_deuce_true():
 
     assert kata.is_deuce() == True
 
+
 def test_has_winner_false():
     first_player = Player("nathanael")
     second_player = Player("gabriel")
@@ -41,3 +42,9 @@ def test_has_advantage_false():
     kata = Kata(first_player, second_player)
     assert kata.has_advantage() == False
 
+
+def test_get_result():
+    first_player = Player("nathanael")
+    second_player = Player("gabriel")
+    kata = Kata(first_player, second_player)
+    assert kata.get_result() == "first:second 0:0"
