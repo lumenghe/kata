@@ -8,3 +8,8 @@ def test_init():
     assert player.name == "nathanael"
     assert player._score == 0
 
+
+def test_score():
+    player = Player("nathanael")
+    assert player.score == 0
+
