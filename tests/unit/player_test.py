@@ -18,3 +18,10 @@ def test_get_one_score():
     player = Player("nathanael")
     player.get_one_score()
     assert player.score == 1
+
+
+def test_score_name():
+    player = Player("nathanael")
+    assert player.score_name() == "love"
+    player.get_one_score()
+    assert player.score_name() == "fifteen"
